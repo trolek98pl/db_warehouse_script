@@ -16,16 +16,16 @@ path = 'C:/Users/Joseph/Documents/db_warehouse_script/student.csv' #   path to d
 f = open(path, 'w') #   open a file
 
 #star topology
-# for i in range(1, 1501):    #   random data and write to file (1500 records)
-#     print(str(i) + "\n")    #   print value the current iteration
-#     f.write(str(i) + "," + random.choice(nazwisko) + "," + random.choice(imie) + "," + str(random.randrange(19, 26)) + "\n")    # write data in file
-
-# f.close() #close file
-
-#snow flake topology
-for i in range(1, 1801):    #   random data and write to file (1500 records)
+for i in range(1, 1501):    #   random data and write to file (1500 records)
     print(str(i) + "\n")    #   print value the current iteration
-    nr_gr = int(math.ceil(i / 60))  # calculate number of group based on student index
-    f.write(str(i) + "," + str(nr_gr) + "," + random.choice(nazwisko) + "," + random.choice(imie) + "," + str(random.randrange(19, 26)) + "\n")    # write data in file
+    f.write(str(i) + "," + random.choice(nazwisko) + "," + random.choice(imie) + "," + str(random.randrange(19, 26)) + "\n")    # write data in file
 
 f.close() #close file
+
+#snow flake topology
+# for i in range(1, 1801):    #   random data and write to file (1500 records)
+#     print(str(i) + "\n")    #   print value the current iteration
+#     nr_gr = int(math.ceil(i / 60))  # calculate number of group based on student index
+#     f.write(str(i) + "," + str(nr_gr) + "," + random.choice(nazwisko) + "," + random.choice(imie) + "," + str(random.randrange(19, 26)) + "\n")    # write data in file
+
+# f.close() #close file
